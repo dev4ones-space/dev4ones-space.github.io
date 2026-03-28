@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home — dev4ones.space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Inter:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #ede9e1;
+      --black: #1a1a18;
+      --white: #ffffff;
+      --footer-bg: #2a2a25;
+      --font-serif: 'Gloock', Georgia, serif;
+      --font-sans: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg); color: var(--black); display: flex; flex-direction: column; min-height: 100vh; }
+    nav { display: flex; align-items: center; gap: 2rem; padding: 1.4rem 2.5rem; background: var(--bg); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { font-family: var(--font-sans); font-weight: 400; font-size: 0.9rem; color: var(--black); text-decoration: none; margin-right: auto; }
+    .nav-link { font-family: var(--font-sans); font-size: 1.05rem; font-weight: 400; color: var(--black); text-decoration: none; }
+    .nav-link:hover { text-decoration: underline; }
+    main { flex: 1; padding: 4rem 2.5rem 6rem; display: flex; flex-direction: column; gap: 2.5rem; }
+    .page-title { font-family: var(--font-serif); font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 400; color: var(--black); line-height: 1.0; letter-spacing: -0.02em; }
+    .page-desc { font-family: var(--font-sans); font-size: 1rem; font-weight: 300; color: var(--black); line-height: 1.6; max-width: 420px; }
+    .btn-learn { display: flex; align-items: center; justify-content: center; width: 340px; padding: 1.1rem 2rem; background: var(--black); color: var(--white); font-family: var(--font-sans); font-size: 0.95rem; font-weight: 400; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; margin-top: 1rem; }
+    .btn-learn:hover { opacity: 0.8; }
+    footer { background: var(--footer-bg); color: var(--white); padding: 4rem 2.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media (max-width: 600px) { footer { grid-template-columns: 1fr; } }
+    .footer-left h2 { font-family: var(--font-serif); font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 400; line-height: 1.05; margin-bottom: 1.25rem; }
+    .footer-left a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; font-size: 0.88rem; font-family: var(--font-sans); }
+    .footer-right { display: flex; flex-direction: column; gap: 0.6rem; padding-top: 0.25rem; }
+    .footer-right p, .footer-right a, .footer-right .or { font-family: var(--font-sans); font-size: 0.9rem; line-height: 1.5; }
+    .footer-right em { font-style: italic; }
+    .footer-right a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+    .footer-right .or { opacity: 0.6; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">dev4ones.space</a>
+    <a href="index.html#get-in-touch" class="nav-link">About</a>
+    <a href="cloud-hosting.html" class="nav-link">Cloud Hosting</a>
+  </nav>
+  <main>
+    <h1 class="page-title">Zygarde<br>Software</h1>
+    <p class="page-desc">Zygarde is Remote Access Tool designed for computer management in corporative space.</p>
+    <a href="mailto:webmaster@dev4ones.space?subject=Zygarde%20Software&body=*by%20sending%20this%20email%20you%20will%20receive%20product%20info%2C%20demonstration%20video%2C%20demo%20version%20and%20offer%20for%20monthly%20(or%20yearly)%20subscription*" class="btn-learn">Learn more</a>
+  </main>
+  <footer id="get-in-touch">
+    <div class="footer-left">
+      <h2>Get in touch</h2>
+      <a href="mailto:webmaster@dev4ones.space">webmaster@dev4ones.space</a>
+    </div>
+    <div class="footer-right">
+      <p>Already have account <em>(and subscription)</em>?</p>
+      <a href="https://dev4ones.space/index.php">log into cloud hosting</a>
+      <p class="or">or</p>
+      <a href="mailto:webmaster@dev4ones.space">contact us to recover account/get help</a>
+    </div>
+  </footer>
+  <script>
+    if (window.location.hash === '#get-in-touch') {
+      window.addEventListener('load', () => {
+        document.getElementById('get-in-touch').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+</html>
